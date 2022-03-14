@@ -15,7 +15,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "choice")
+@Table(name = "Choice")
 public class ChoiceEntity implements Serializable {
 
     /**
