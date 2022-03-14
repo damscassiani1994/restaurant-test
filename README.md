@@ -25,5 +25,5 @@ Esta api rest permite el registro y consulta de encuestas, esta contruida bajo a
 http://localhost:8080/restaurant/swagger-ui/index.html
 
 ## Diagrama de entidades
-![alt text](Entidad-relacion.png)
+![alt text](Entidad_relacion.png)
 
