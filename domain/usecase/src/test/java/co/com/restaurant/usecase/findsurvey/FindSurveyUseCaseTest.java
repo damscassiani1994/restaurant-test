@@ -44,10 +44,12 @@ public class FindSurveyUseCaseTest {
     @Test
     public void findSurveyWithErrorNOTFOUND() {
 
-        Mockito.when(findSurveyGateway.findById(ID)).thenThrow(new SurveyException(ErrorMessage.NOT_FOUND));
+        Mockito.when(findSurveyGateway.findById(ID)).thenReturn(Optional.empty());;
+
 
         try {
             findSurveyUseCase.findById(ID);
+            Assert.fail();
         } catch (SurveyException exc) {
             Assert.assertEquals(ERROR_MESSAGE, exc.getErrorMessage().getMessage());
             Assert.assertEquals(ERROR_CODE, exc.getErrorMessage().getCode());

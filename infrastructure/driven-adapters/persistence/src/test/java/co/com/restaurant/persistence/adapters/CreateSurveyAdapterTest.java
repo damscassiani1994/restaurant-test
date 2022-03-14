@@ -28,7 +28,6 @@ public class CreateSurveyAdapterTest {
     private CreateSurveyAdapter createSurveyAdapter;
 
     @Test
-    @DisplayName("when run create survey successfully in persistence")
     public void createSurveySuccess() {
         SurveyEntity surveyEntity = new SurveyEntityDataBuilder().build();
         Mockito.when(surveyJPARepositoryMock.save(Mockito.any()))

@@ -29,7 +29,6 @@ public class FindSurveyAdapterTest {
     private FindSurveyAdapter findSurveyAdapter;
 
     @Test
-    @DisplayName("when run search by survey id successfully in persistence")
     public void createSurveySuccess() {
         SurveyEntity surveyEntity = new SurveyEntityDataBuilder().build();
         Mockito.when(surveyJPARepositoryMock.findById(ID))

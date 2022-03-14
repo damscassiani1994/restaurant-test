@@ -51,10 +51,11 @@ public class CreateSurveyUseCaseTest {
     public void createSurveyWithErrorInternalSever() {
 
         Mockito.when(createSurveyGateway.create(surveyMock))
-                .thenThrow(new SurveyException(ErrorMessage.ERROR_INTERNAL_SERVER));
+                .thenReturn(Optional.empty());
 
         try {
             createSurveyUseCase.create(surveyMock);
+            Assert.fail();
         } catch (SurveyException exc) {
             Assert.assertEquals(ERROR_MESSAGE, exc.getErrorMessage().getMessage());
             Assert.assertEquals(ERROR_CODE, exc.getErrorMessage().getCode());
