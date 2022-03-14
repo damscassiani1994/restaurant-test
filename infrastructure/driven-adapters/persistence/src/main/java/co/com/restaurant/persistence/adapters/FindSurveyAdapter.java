@@ -1,7 +1,5 @@
 package co.com.restaurant.persistence.adapters;
 
-import co.com.restaurant.model.exception.ErrorMessage;
-import co.com.restaurant.model.exception.SurveyException;
 import co.com.restaurant.persistence.entity.SurveyEntity;
 import co.com.restaurant.persistence.repository.SurveyJPARepository;
 import co.com.restaurant.model.Survey;
