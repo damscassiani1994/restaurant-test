@@ -9,6 +9,4 @@ import java.util.Optional;
 
 @Repository
 public interface SurveyJPARepository extends CrudRepository<SurveyEntity, Long> {
-
-    public Optional<SurveyEntity> findFirstByOrderById();
 }
